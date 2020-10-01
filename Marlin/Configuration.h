@@ -379,10 +379,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+  // Custom Hotend 50W heater
+  #define  DEFAULT_Kp 18.03
+  #define  DEFAULT_Ki 1.33
+  #define  DEFAULT_Kd 61.29
+
   // i3 Mega stock v5 hotend, 40W heater cartridge (3.6Ω @ 22°C)
-  #define  DEFAULT_Kp 15.94
-  #define  DEFAULT_Ki 1.17
-  #define  DEFAULT_Kd 54.19
+  // #define  DEFAULT_Kp 15.94
+  // #define  DEFAULT_Ki 1.17
+  // #define  DEFAULT_Kd 54.19
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -437,9 +442,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Anycubic i3 Mega Ultrabase (0.9Ω @ 22°C)
-  #define DEFAULT_bedKp 251.78
-  #define DEFAULT_bedKi 49.57
-  #define DEFAULT_bedKd 319.73
+  #define DEFAULT_bedKp 182.20
+  #define DEFAULT_bedKi 34.75
+  #define DEFAULT_bedKd 238.82
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -614,7 +619,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 92.6 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 416.80 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -872,7 +877,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_E0_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
 #define INVERT_E1_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
